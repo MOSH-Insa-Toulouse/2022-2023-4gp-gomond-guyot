@@ -1,3 +1,6 @@
+#Ajout de tous les fichiers ZIP pour les exclure des commits
+*.zip
+
 # For PCBs designed using KiCad: http://www.kicad-pcb.org/
 # Format documentation: http://kicad-pcb.org/help/file-formats/
 
