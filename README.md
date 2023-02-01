@@ -8,3 +8,4 @@ TD Capteur
 - [ ] Add KiCad project
 - [ ] Create KiCad schematic
 - [ ] Add arduino project
+  
