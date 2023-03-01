@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Capteur_Graphite")(type "KiCad")(uri "${KIPRJMOD}/Capteur_Graphite.kicad_sym")(options "")(descr ""))
+)
