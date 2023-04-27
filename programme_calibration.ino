@@ -10,7 +10,7 @@ Servo myservo;  // create servo object to control a servo
 
 int pos = 0;    // variable to store the servo position
 int pos_min = 0;    // =0°
-int pos_max = 110;  // =90°
+int pos_max = 110;  // =120°
 
 void setup()
 {
