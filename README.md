@@ -73,6 +73,8 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='CinquiemeSection1'/>
 
 ### 5.1. Schématique du circuit et création des symboles et empreintes des composants 
+La première étape du KICAD a été de réaliser la schématique du circuit, basé sur la simulation réalisée précédemment. Pour cela, nous avons tout d’abord importé le schéma de l’Arduino Uno qui existe déjà sur KiCAD. Nous avons été ensuite amenés à créer les symboles pour les composants non-existants sur LTSpice, ainsi que leur empreinte sur le PCB. Voici ci-dessous les différentes symboles avec leur empreinte associé:
+
 * Amplificateur LTC1050
 
 
@@ -86,6 +88,11 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 
 * Module bluetooth HC05
+
+
+Pour les résistances nous avons choisi comme empreinte la Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal, excepté pour R2 pour laquelle nous avons pris la même empreinte mais à la verticale (elle a donc été placée à la japonaise). Concernant les capacités, C1 et C2 possède comme empreinte Capacitor_THT: C_Disc_D3.0mm_W1.6mm_P2.50mm, tandis que C4 a pour empreinte Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm.
+Voici ci-dessous le schéma de la schématique du circuit réalisé sur KiCAD:
+
 
 
 <div id='CinquiemeSection2'/>
