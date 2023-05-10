@@ -34,8 +34,6 @@
 Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du département de Génie Physique de l’INSA Toulouse. Basé sur l’article …, l’objectif de ce projet est de développer un capteur de déformation low-technologie à base de papier et de graphite. En effet, lorsque l’on déforme le papier, la distance entre les particules de graphite déposées au préalable change selon si l’on applique une tension ou une compression. Cette modification de résistance implique une modification de la conductivité de la couche de graphite. On peut ainsi mesurer une variation de résistance que l’on peut relier à la déformation.
 Notre objectif était donc de réaliser ce capteur entièrement, c'est-à-dire que nous allions passer par toutes les étapes de sa conception en partant du design et de la fabrication du PCB jusqu’au test du capteur en passant par de la programmation.
 
-
-
 <div id='DeuxiemeSection'/>
 
 ## 2. Les livrables
@@ -96,6 +94,7 @@ La première étape du KICAD a été de réaliser la schématique du circuit, ba
 
 * Flex Sensor
 
+<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Flex_sensor_shema.jpg"> <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/3d_flex.jpg">
 
 
 Pour les résistances nous avons choisi comme empreinte la Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal, excepté pour R2 pour laquelle nous avons pris la même empreinte mais à la verticale (elle a donc été placée à la japonaise). Concernant les capacités, C1 et C2 possède comme empreinte Capacitor_THT: C_Disc_D3.0mm_W1.6mm_P2.50mm, tandis que C4 a pour empreinte Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm.
@@ -181,16 +180,47 @@ Le schéma fonctionnel du programme derrière l’application est visible sous c
 <div id='NeuviemeSection1'/>
 
 ### 9.1. Banc de test 
+Pour réaliser les différents tests de calibration nous avons réaliser deux banc de test pour avoir une calibration en fonction de la déformation et en fonction de l'angle. Nous avons réaliser les deux calibrations car nous avons trouvé, sur le point physique, intéressant de la réaliser en fonction de la déformation de la couche de graphyte. Mais sur l'aspect utilisation du capteur, il est plus utile et intéressant de connaitre la résistance en fonction de l'angle que fait le capteur.
+
+#### Banc de test pour la calibration en fonction de la deformation
+Pour cette methodes nous avons découper des cercles de différents rayon de courbure (1, 2, 4, 6) comme montrée ci dessous.
+
+<p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/calibration_deformation.jpg">
+	
+Ce rayon de courbure nous permet de remonter à la déformation ε gracce à la formule suivante qui est expliqué par le shéma ci-dessous.
+
+<img width="500" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/formule_def.png"> <img width="200" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/explication_deformation.png">
+
+
+#### Banc de test pour la calibration en fonction de l'angle
+Pour cette methode nous avons utiliser un module en bois  qui était fournis pas nos professeur ainsi qu'un cervo-moteur. Nous utilison le code décrit à la partit 7.2 pour la calibration. Le cervo-moteur tors le capteur à différents angles prés definit.
+	
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/callibration_angle.jpg"> <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/callibration_angle2.jpg">
+
 
 <div id='NeuviemeSection2'/>
 
 ### 9.2. Résultats
+Les résultats complet on été réalisé sur exel dans le dossier [result].(https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/result/calcules_deformation.xlsx)
+* Variation of resistance in function of the deformation (tension)
+
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
+
+* Variation of resistance in function of the deformation (compression)
+
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_compression.png">
+
+* Variation of resistance in function of the deformation angle (compression)
+
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
 
 <div id='NeuviemeSection3'/>
  
 ### 9.3. Pistes d'améliorations
 
 #### Comparaison avec le Flex-Sensor SEN-10264
+
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbes_flex_compression.png">
 
 
 <div id='DixiemeSection'/>
