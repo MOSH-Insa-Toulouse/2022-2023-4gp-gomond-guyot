@@ -121,6 +121,13 @@ Afin de visualiser en 3D notre composant et pouvoir voir la place que prend chaq
 <div id='SixiemeSection'/>
 
 ## 6. Fabrication du shield 
+Le PCB a été réalisé par Catherine CROUZET du département du Génie Physique de l’INSA Toulouse à l’aide du matériel du département du Génie Physique et du département	Électrique et Informatique. Avant impression, l’empreinte du PCB a été vérifiée par Mme CROUZET qui a ensuite imprimé sur papier le calque de modélisation issu du PCB réalisé sur KiCAD.
+ Nous sommes parti d’une plaquette d'époxy couverte d’une couche de cuivre d’environ  60µm sur laquelle nous avons appliqué notre calque qui a permis de tracer les pistes sur la plaquette du PCB à l’aide d’une insolation UV. Une fois les pistes tracées, elles sont ensuite révélées à l’aide d’un révélateur qui après quelques minutes, retire la résine non éclairée pas les UV. La plaquette est ensuite placée dans un bain de perchlorure de fer pendant 7 minutes afin de réaliser la gravure du PCB. Lors de cette étape, le cuivre non protégé par la résine est retiré. Nous obtenons alors le PCB comme désigné sur KiCAD. On applique pour terminer un peu d’acétone afin de retirer les dernières traces de résines encore présentes.
+ 
+ <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Shilde.jpg"> <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/shilde2.jpg">
+ 
+Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis la soudure des composants. Pour cela nous avons utilisé la perceuse électrique mise à disposition aux étudiants du Génie Physique. Les tailles de forêts ont été choisies en fonction des tailles de trous de perçage designé sur KiCAD (c’est à dire 0,8mm ou 1mm de diamètre selon les composants). Une fois tous les composants soudés sur la face avant, nous avons pu connecter le PCB à l’Arduino Uno. 
+
 <div id='SixiemeSection1'/>
 
 ### 6.1. Réalisation du PCB 
