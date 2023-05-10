@@ -216,7 +216,7 @@ Nous avons réaliser les mesures en fonction de la déformation en compression e
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
 
-Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va d'étier ce qui va augmenter la distance entre les différents atomes de carbons et ainsi augmenter la résitancce du capteur.
+Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va s'étirer ce qui va augmenter la distance entre les différents atomes de carbon et ainsi augmenter la résitance du capteur.
 Lorsque nous travaillons en tension, il se passe l'opposé, les atomes de carbon vont se rapprocher et la résistance du capteur va diminuer.
 En fonction du type de crayon utilisé, les variations relatives de résistance changent. En effet, plus le crayon est gras, c'est à dire qu'il dépose plus de graphite, moins sa variation relative de résistance est élevée. Nous pouvons vérifier cela sur les différentes courbes que nous avons obtenu.
 
