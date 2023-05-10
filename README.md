@@ -201,27 +201,37 @@ Pour cette methode nous avons utiliser un module en bois  qui était fournis pas
 <div id='NeuviemeSection2'/>
 
 ### 9.2. Résultats
-Les résultats complet on été réalisé sur exel dans le dossier [result].(https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/result/calcules_deformation.xlsx)
-* Variation of resistance in function of the deformation (tension)
+Les résultats complet on été réalisé sur exel dans le dossier [result.](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/result/calcules_deformation.xlsx) Sinon voici les différentes courbes de callibrations en fonction de l'ange et de la déformation.
+Nous avons réaliser les mesures en fonction de la déformation en compression et en tension. Pour les mesures en fonction de l'angle, nous avons réaliser seulement la compression car les résultats que nous avons obtenue en tension n'était pas exploitable.
+
+* Variation de la résistance en function de la deformation (tension)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
 
-* Variation of resistance in function of the deformation (compression)
+* Variation de la résistance en function de la deformation (compression)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_compression.png">
 
-* Variation of resistance in function of the deformation angle (compression)
+* Variation de la résistance en function de l'angle (compression)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
+
+Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va d'étier ce qui va augmenter la distance entre les différents atomes de carbons et ainsi augmenter la résitancce du capteur.
+Lorsque nous travaillons en tension, il se passe l'opposé, les atomes de carbon vont se rapprocher et la résistance du capteur va diminuer.
+En fonction du type de crayon utilisé, les variations relatives de résistance changent. En effet, plus le crayon est gras, c'est à dire qu'il dépose plus de graphite, moins sa variation relative de résistance est élevée. Nous pouvons vérifier cela sur les différentes courbes que nous avons obtenu.
 
 <div id='NeuviemeSection3'/>
  
 ### 9.3. Pistes d'améliorations
 
+
 #### Comparaison avec le Flex-Sensor SEN-10264
+
+*Variation de la résistance du flex sensor en compression
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbes_flex_compression.png">
 
+Pour comparer la sensibilité des deux capteurs, nous pouvons comparer les coefficients directeur du flex sensor avec celui du capteur de contrainte HB sur la compression. Pour le flex sensor, nous avons obtenu un coefficient de -1.891/° tandis que pour le capteur de contrainte HB nous avons -0.24/°. On peu donc dire que le flex sensor et beaucoup plus sensible à la déformation que notre capteur de contrainte en graphite. Le flex sensor pourrait être plus utile pour detecter de petites déformations grâce à ca plus grande sensibilité. A coté de cela, notre capteur en graphite à plus de dificulté à détecter les petites déformation ou les petit angles. Il serait plus utile pour savoir si il est plié ou non.
 
 <div id='DixiemeSection'/>
 
