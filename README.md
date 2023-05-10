@@ -4,7 +4,7 @@ Ce projet s'inscrit dans l'UF **"Du capteur au banc de test"** en 4ème année a
 ***
 L'objectif de ce dernier est d'élaborer un **capteur de déformation** low-tech à base de graphite. L'application d'une contrainte mécanique sur un capteur en papier sur lequel un dépôt de crayon à papier à été fait, modifie la distance entre les particules de graphite. La conductivité électrique de la couche de graphite est elle aussi modifiée et celà induit une variation de la résistance. C'est cette donnée qui va nous intéresser.
 
-<p align="center"><img width="600" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/capteur_graphite.jpg">
+<p align="center"><img width="550" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/capteur_graphite.jpg">
 
 L'ensemble des étapes menées pour réaliser ce capteur, en allant du **design** jusqu'à la **réalisation** en passant par le **codage** seront détaillées dans ce dossier.
 
@@ -52,6 +52,7 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 ### 3.2. Code Arduino <a id="TroisiemeSection2"></a>
 
+ 
 
 #### Code Graphite_sensor
 
