@@ -88,9 +88,9 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 * Module bluetooth HC05
 
 
+<div id='CinquiemeSection2'/>
 
-
-### 5.2. Réalisation du PCB et visualisation 3D <div id='CinquiemeSection2'/>
+### 5.2. Réalisation du PCB et visualisation 3D 
 
 
 
@@ -98,20 +98,26 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='SixiemeSection'/>
 
 ## 6. Fabrication du shield 
+<div id='SixiemeSection1'/>
 
-### 6.1. Réalisation du PCB <div id='SixiemeSection1'/>
+### 6.1. Réalisation du PCB 
 
-  
-### 6.2. Perçage et soudure <div id='SixiemeSection2'/>
+
+<div id='SixiemeSection2'/>
+
+### 6.2. Perçage et soudure 
 
 
 <div id='SeptiemeSection'/>
 
 ## 7. Arduino 
+<div id='SeptiemeSection1'/>
 
-### 7.1. Librairies utilisées <div id='SeptiemeSection1'/>
+### 7.1. Librairies utilisées 
 
-### 7.2. Code Arduino <div id='SeptiemeSection2'/>
+<div id='SeptiemeSection2'/>
+
+### 7.2. Code Arduino 
 
 
 
@@ -123,12 +129,17 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='NeuviemeSection'/>
 
 ## 9. Réalisation des teste et résultats 
+<div id='NeuviemeSection1'/>
 
-### 9.1. Banc de test <div id='NeuviemeSection1'/>
+### 9.1. Banc de test 
 
-### 9.2. Résultats <div id='NeuviemeSection2'/>
+<div id='NeuviemeSection2'/>
 
-### 9.3. Pistes d'améliorations <div id='NeuviemeSection3'/>
+### 9.2. Résultats
+
+<div id='NeuviemeSection3'/>
+ 
+### 9.3. Pistes d'améliorations
 
 #### Comparaison avec le Flex-Sensor SEN-10264
 
