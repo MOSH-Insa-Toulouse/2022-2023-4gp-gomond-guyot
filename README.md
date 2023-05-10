@@ -70,7 +70,9 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='CinquiemeSection'/>
 
 ## 5. KiCad 
-### 5.1. Schématique du circuit et création des symboles et empreintes des composants <div id='CinquiemeSection1'/>
+<div id='CinquiemeSection1'/>
+
+### 5.1. Schématique du circuit et création des symboles et empreintes des composants 
 * Amplificateur LTC1050
 
 
