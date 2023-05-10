@@ -141,12 +141,26 @@ Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis l
 <div id='SeptiemeSection1'/>
 
 ### 7.1. Librairies utilisées 
+Pour la réalisation du code Arduino nous avons utiliser deux librairies qui sont **"SoftwareSerial.h"** pour réaliser un software serial sur deux pin pour l'utilisation du modude bluetooth. La deuxième est **"Adafruit_SSD1306.h"** qui sert pour l'utilisation de l'écran OLED.
+
 
 <div id='SeptiemeSection2'/>
 
 ### 7.2. Code Arduino 
+Nous avons réaliser deux code Arduino dans ce projet. Le premier permet de controler le capteur et tout ces composants. Le deuxième sert lors de la procédure de calibration.
 
+#### Code pour le Capteur 
+Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/Programme_finaleVFinale.ino) est le coeur du fonctionnement du capteur. 
+-Il permet tout d'abord récupérer les valeurs de tension en sortie de l'amplificateur et de réaliser les différents calcules pour retrouver la résistance de notre capteur.
+-Il permet également le contrôle et l'utiisaton des différents éléments ajouter sur le shield:
+	* il y a le module Bluetooth qui permet d'envoyer la valeur de tension lu et de l'envoyer à l'application android.
+	* il y a l'encodeur rotatoire ou nous avons grâce à lui réaliser trois menues en fonction de la ou on se trouve dans la plage de valeurs de l'encodeur. Il y a un menue avec un mode de lecteur continue de la résistance. Un mode ou un réaliser une moyenne sur 200 valeurs de la résistance. Un mode pour afficher la lecture du flex sensor. Tout ces menues sont visible sur l'écran OLED.
+	* il y a l'écran OLED qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menue que nous avons choisi. Le menue ou nous somme est également affiché.
+	
+<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_continue.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_moyenne.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/flex_sensor2.jpg">
 
+#### Code pour la calibration
+Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/programme_calibration.ino) permet de contrôler un Cervo-Moteur qui va se positionner à différent angles déterminés (0, 30, 60, 90, 120). Il va attendre 2 secondes à chaques position pour nous permettre de lire la valeurs. La procédure est activé grâce à un bouton poussoir et pendant que le cervo-moteur est en mouvement une led est allumée.
 
 <div id='HuigtiemeSection'/>
 
@@ -188,6 +202,7 @@ La datasheet du capteur est disponible [ici](https://github.com/MOSH-Insa-Toulou
 
 ## Contacts 
 Nous somme disponibles pour toute question sur le projet, n'hesitez pas à nous contacter.
+
 -GUYOT Adrien : aguyot@etud.insa-toulouse.fr
 -GOMOND François : fgomond@insa-toulouse.fr
 
