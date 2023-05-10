@@ -152,9 +152,12 @@ Nous avons réaliser deux code Arduino dans ce projet. Le premier permet de cont
 Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/Programme_finaleVFinale.ino) est le coeur du fonctionnement du capteur. 
 -Il permet tout d'abord récupérer les valeurs de tension en sortie de l'amplificateur et de réaliser les différents calcules pour retrouver la résistance de notre capteur.
 -Il permet également le contrôle et l'utiisaton des différents éléments ajouter sur le shield:
-	* il y a le module Bluetooth qui permet d'envoyer la valeur de tension lu et de l'envoyer à l'application android.
-	* il y a l'encodeur rotatoire ou nous avons grâce à lui réaliser trois menues en fonction de la ou on se trouve dans la plage de valeurs de l'encodeur. Il y a un menue avec un mode de lecteur continue de la résistance. Un mode ou un réaliser une moyenne sur 200 valeurs de la résistance. Un mode pour afficher la lecture du flex sensor. Tout ces menues sont visible sur l'écran OLED.
-	* il y a l'écran OLED qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menue que nous avons choisi. Le menue ou nous somme est également affiché.
+	
+   * il y a le **module Bluetooth** qui permet d'envoyer la valeur de tension lu et de l'envoyer à l'application android.
+	
+   * il y a **l'encodeur rotatoire** ou nous avons grâce à lui réaliser trois menues en fonction de la ou on se trouve dans la plage de valeurs de l'encodeur. Il y a un menue avec un mode de lecteur continue de la résistance. Un mode ou un réaliser une moyenne sur 200 valeurs de la résistance. Un mode pour afficher la lecture du flex sensor. Tout ces menues sont visible sur l'écran OLED.
+	
+   * il y a **l'écran OLED** qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menue que nous avons choisi. Le menue ou nous somme est également affiché.
 	
 <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_continue.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_moyenne.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/flex_sensor2.jpg">
 
