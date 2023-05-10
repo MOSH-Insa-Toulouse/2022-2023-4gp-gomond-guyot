@@ -32,7 +32,7 @@
 ## 1. Description du projet 
 
 Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du département de Génie Physique de l’INSA Toulouse. Basé sur l’article …, l’objectif de ce projet est de développer un capteur de déformation low-technologie à base de papier et de graphite. En effet, lorsque l’on déforme le papier, la distance entre les particules de graphite déposées au préalable change selon si l’on applique une tension ou une compression. Cette modification de résistance implique une modification de la conductivité de la couche de graphite. On peut ainsi mesurer une variation de résistance que l’on peut relier à la déformation.
-	Notre objectif était donc de réaliser ce capteur entièrement, c'est-à-dire que nous allions passer par toutes les étapes de sa conception en partant du design et de la fabrication du PCB jusqu’au test du capteur en passant par de la programmation.
+Notre objectif était donc de réaliser ce capteur entièrement, c'est-à-dire que nous allions passer par toutes les étapes de sa conception en partant du design et de la fabrication du PCB jusqu’au test du capteur en passant par de la programmation.
 
 
 
@@ -77,30 +77,46 @@ La première étape du KICAD a été de réaliser la schématique du circuit, ba
 
 * Amplificateur LTC1050
 
+<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/LTCL050.jpg">
 
 
 * Ecran OLED
 
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Oled2.jpg"> <img width="250" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/OLED.jpg">
 
 
 * Encodeur rotatoire KY_040
 
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/encodeur2.jpg"> <img width="250" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Encodeur.jpg">
 
 
 * Module bluetooth HC05
 
+<img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Bluetooth2.jpg"> <img width="250" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Bluetooth.jpg">
+
+* Flex Sensor
+
+
 
 Pour les résistances nous avons choisi comme empreinte la Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal, excepté pour R2 pour laquelle nous avons pris la même empreinte mais à la verticale (elle a donc été placée à la japonaise). Concernant les capacités, C1 et C2 possède comme empreinte Capacitor_THT: C_Disc_D3.0mm_W1.6mm_P2.50mm, tandis que C4 a pour empreinte Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm.
+
 Voici ci-dessous le schéma de la schématique du circuit réalisé sur KiCAD:
 
+<p align="center"><img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/PCB-scheme.jpg">
 
 
 <div id='CinquiemeSection2'/>
 
 ### 5.2. Réalisation du PCB et visualisation 3D 
+Pour le PCB, nous avions pour contrainte de n’imprimer que sur une seule face. Il a donc fallu optimiser autant que possible les connexions entre les différents composés afin de limiter la présence de PADs. Nous avons réussi à n’avoir besoin que d'un seul PADs sur notre PCB, qui, n’ayant pas de face arrière, s’est traduit par la connexion du PADS à l’aide d’un fil de résistance. Voici ci-dessous l’empreinte du PCB réalisé:
 
+<p align="center"><img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/PCB.jpg">
 
-
+Le plan en bleu est le plan de masse. Les PADS sont de formes circulaires de 2mm de diamètre avec une forme de perçage circulaire de 1mm pour l’Arduino et le capteur de déformation et 0,8mm pour le reste. Les largeurs de pistes sont de 1mm et l’isolation entre les pistes et le plan de masse est de 0,3mm. Nous avons choisi ces derniers paramètres afin de faciliter l’étape de soudure.
+	
+Afin de visualiser en 3D notre composant et pouvoir voir la place que prend chaque composant, nous avons dû, pour les empreintes qie nous avons créées, utiliser le site internet GrabCADafin de récupérer le fichier 3D de nos composants. Voici-ci dessous la visualisation 3D du PCB réalisé: 
+	
+<p align="center"><img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/3D.jpg">
 
 <div id='SixiemeSection'/>
 
