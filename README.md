@@ -9,29 +9,29 @@ L'objectif de ce dernier est d'élaborer un **capteur de déformation** low-tech
 L'ensemble des étapes menées pour réaliser ce capteur, en allant du **design** jusqu'à la **réalisation** en passant par le **codage** seront détaillées dans ce dossier.
 
 ## Sommaire
-* [1. Description du projet et détail des livrables](#PremiereSection)
-* [2. Matériel nécessaire](#DeuxiemeSection)
-* [3. Arduino](#TroisiemeSection)
-  * [3.1. Librairies utilisées](#TroisiemeSection1)
-  * [3.2. Code Arduino](#TroisiemeSection1)
-* [4. Application Android](#QuatriemeSection)
+* [1. Description du projet](#PremiereSection)
+* [2. Les livrables](#DeuxiemeSection)
+* [3. Matériel nécessaire](#TroisiemeSection)
+* [4. Simulation](#QuatriemeSection)
 * [5. KiCad](#CinquiemeSection)
-  * [5.1. Symboles et empreintes des composants](#CinquiemeSection1)
-  * [5.2. Schématique](#CinquiemeSection2)
-  * [5.3. Placement des composants](#CinquiemeSection3)
-  * [5.4. Visualisation 3D](#CinquiemeSection4)
+  * [5.1. Schématique du circuit et création des symboles et empreintes des composants](#CinquiemeSection1)
+  * [5.2. Réalisation du PCB et visualisation 3D](#CinquiemeSection2)
 * [6. Fabrication du shield](#SixiemeSection)
   * [6.1. Réalisation du PCB](#SixiemeSection1)
   * [6.2. Perçage et soudure](#SixiemeSection2)
-* [7. Simulation](#SeptiemeSection)
-* [8. Tests et résultats](#HuigtiemeSection)
-  * [8.1. Banc de test](#HuigtiemeSection1)
-  * [8.2. Résultats obtenus](#HuigtiemeSection2)
-  * [8.3. Analyse des résultats et pistes d'améliorations](#HuigtiemeSection3)
-* [9. Datasheet](#NeuviemeSection)
-* [Contacts](#DixiemeSection)
+* [7. Arduino](#SeptiemeSection)
+  * [7.1. Librairies utilisées](#SeptiemeSection1)
+  * [7.2. Code Arduino](#SeptiemeSection2)
+* [8. Application Android](#HuigtiemeSection)
+* [9. Réalisation des teste et résultats](#NeuviemeSection)
+  * [9.1. Banc de test](#NeuviemeSection1)
+  * [9.2. Résultats](#NeuviemeSection2)
+  * [9.3. Pistes d'améliorations](#NeuviemeSection3)
+* [10. Datasheet](#DixiemeSection)
+* [Contacts](#OnziemeSection)
+ 
 
-## 1. Détail des livrables et description du projet <a id="PremiereSection"></a>
+## 1. Détail des livrables et description du projet <div id='PremiereSection'/>
 
 
 
@@ -60,7 +60,7 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 #### Code Angle_calibration
 
 
-## 4. Application Android <a id="QuatriemeSection"></a>
+## 4. Application Android <div id='QuatriemeSection'/>
 
 
 ## 5. KiCad <a id="CinquiemeSection"></a>
