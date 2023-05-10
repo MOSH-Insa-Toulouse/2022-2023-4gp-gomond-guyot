@@ -50,18 +50,23 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 * x1 encodeur rotatoire KY_040
 * x1 écran OLED I2C 0.91
 
-## 3. Matériel nécessaire <a id="TroisiemeSection"></a>
+<div id='TroisiemeSection'/>
+
+## 3. Matériel nécessaire 
 
 
  
 
 
+<div id='QuatriemeSection'/>
 
-## 4. Simulation <div id='QuatriemeSection'/>
+## 4. Simulation 
 
 
-## 5. KiCad <a id="CinquiemeSection"></a>
-### 5.1. Schématique du circuit et création des symboles et empreintes des composants <a id="CinquiemeSection1"></a>
+<div id='CinquiemeSection'/>
+
+## 5. KiCad 
+### 5.1. Schématique du circuit et création des symboles et empreintes des composants <div id='CinquiemeSection1'/>
 * Amplificateur LTC1050
 
 
@@ -79,41 +84,56 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 
 
-### 5.2. Réalisation du PCB et visualisation 3D <a id="CinquiemeSection2"></a>
+### 5.2. Réalisation du PCB et visualisation 3D <div id='CinquiemeSection2'/>
 
 
 
 
-## 6. Fabrication du shield <a id="SixiemeSection"></a>
+<div id='SixiemeSection'/>
 
-### 6.1. Réalisation du PCB <a id="SixiemeSection1"></a> 
+## 6. Fabrication du shield 
+
+### 6.1. Réalisation du PCB <div id='SixiemeSection1'/>
 
   
-### 6.2. Perçage et soudure <a id="SixiemeSection2"></a> 
+### 6.2. Perçage et soudure <div id='SixiemeSection2'/>
 
 
-## 7. Arduino <a id="SeptiemeSection"></a> 
+<div id='SeptiemeSection'/>
 
-### 7.1. Librairies utilisées 
+## 7. Arduino 
 
-### 7.2. Code Arduino
+### 7.1. Librairies utilisées <div id='SeptiemeSection1'/>
+
+### 7.2. Code Arduino <div id='SeptiemeSection2'/>
 
 
-## 8. Application Android <a id="HuigtiemeSection"></a> 
+
+<div id='HuigtiemeSection'/>
+
+## 8. Application Android 
 
 
-## 9. Réalisation des teste et résultats <a id="NeuviemeSection"></a> 
+<div id='NeuviemeSection'/>
 
-### 9.1. Banc de test
+## 9. Réalisation des teste et résultats 
 
-### 9.2. Résultats
+### 9.1. Banc de test <div id='NeuviemeSection1'/>
 
-### 9.3. Pistes d'améliorations
+### 9.2. Résultats <div id='NeuviemeSection2'/>
+
+### 9.3. Pistes d'améliorations <div id='NeuviemeSection3'/>
 
 #### Comparaison avec le Flex-Sensor SEN-10264
 
 
+<div id='DixiemeSection'/>
+
 ## 10. Datasheet
+
+
+
+<div id='OnziemeSection'/>
 
 ## Contacts 
 
