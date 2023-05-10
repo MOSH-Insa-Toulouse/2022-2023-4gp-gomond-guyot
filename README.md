@@ -30,12 +30,15 @@ L'ensemble des étapes menées pour réaliser ce capteur, en allant du **design*
 * [10. Datasheet](#DixiemeSection)
 * [Contacts](#OnziemeSection)
  
+<div id='PremiereSection'/>
 
-## 1. Détail des livrables et description du projet <div id='PremiereSection'/>
+## 1. Description du projet 
 
 
 
-## 2. Matériel nécessaire
+<div id='DeuxiemeSection'/>
+
+## 2. Les livrables
 Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composants nécessaires :
 * x2 résistance 100kΩ
 * x1 résistance 10kΩ
@@ -47,24 +50,18 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 * x1 encodeur rotatoire KY_040
 * x1 écran OLED I2C 0.91
 
-## 3. Arduino <a id="TroisiemeSection"></a>
-### 3.1. Librairies utilisées <a id="TroisiemeSection1"></a>
+## 3. Matériel nécessaire <a id="TroisiemeSection"></a>
 
-### 3.2. Code Arduino <a id="TroisiemeSection2"></a>
 
  
 
-#### Code Graphite_sensor
 
 
-#### Code Angle_calibration
-
-
-## 4. Application Android <div id='QuatriemeSection'/>
+## 4. Simulation <div id='QuatriemeSection'/>
 
 
 ## 5. KiCad <a id="CinquiemeSection"></a>
-### 5.1. Symboles et empreintes des composants <a id="CinquiemeSection1"></a>
+### 5.1. Schématique du circuit et création des symboles et empreintes des composants <a id="CinquiemeSection1"></a>
 * Amplificateur LTC1050
 
 
@@ -82,13 +79,10 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 
 
-### 5.2. Schématique <a id="CinquiemeSection2"></a>
+### 5.2. Réalisation du PCB et visualisation 3D <a id="CinquiemeSection2"></a>
 
 
 
-### 5.3. Placement des composants <a id="CinquiemeSection3"></a>
-
-### 5.4. Visualisation 3D <a id="CinquiemeSection4"></a>
 
 ## 6. Fabrication du shield <a id="SixiemeSection"></a>
 
@@ -98,31 +92,30 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 ### 6.2. Perçage et soudure <a id="SixiemeSection2"></a> 
 
 
-## 7. Simulation <a id="SeptiemeSection"></a> 
+## 7. Arduino <a id="SeptiemeSection"></a> 
+
+### 7.1. Librairies utilisées 
+
+### 7.2. Code Arduino
 
 
-## 8. Tests et résultats <a id="HuigtiemeSection"></a> 
-### 8.1. Banc de test <a id="HuigtiemeSection1"></a> 
+## 8. Application Android <a id="HuigtiemeSection"></a> 
 
 
+## 9. Réalisation des teste et résultats <a id="NeuviemeSection"></a> 
 
+### 9.1. Banc de test
 
-### 8.2. Résultats obtenus <a id="SeptiemeSection2"></a> 
+### 9.2. Résultats
 
+### 9.3. Pistes d'améliorations
 
-### 8.3. Analyse des résultats et pistes d'améliorations <a id="HuigtiemeSection3"></a> 
-
- 
 #### Comparaison avec le Flex-Sensor SEN-10264
 
 
- 
+## 10. Datasheet
 
- 
-#### Pistes d'améliorations 
-
-  
-## 9. Datasheet <a id="NeuviemeSection"></a> 
+## Contacts 
 
 
-## Contacts <a id="DixiemeSection"></a> 
+
