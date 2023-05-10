@@ -1,69 +1,80 @@
-# 2022-2023-4gp-gomond-guyot
-TD Capteur
-Ce projet s'inscrit dans l'UF **"Du capteur au banc de test"** en 4ème année au département de Génie Physique de l'INSA Toulouse.
+# Projet Capteur
 ***
-L'objectif de ce dernier est d'élaborer un **capteur de déformation** low-tech à base de graphite. L'application d'une contrainte mécanique sur un capteur en papier sur lequel un dépôt de crayon à papier à été fait, modifie la distance entre les particules de graphite. La conductivité électrique de la couche de graphite est elle aussi modifiée et celà induit une variation de la résistance. C'est cette donnée qui va nous intéresser.
+<p align="center"><img width="550" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/capteur_graphite.jpg">
 
-<p align="center"><img width="600" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/capteur_graphite.jpg">
+***
 
-L'ensemble des étapes menées pour réaliser ce capteur, en allant du **design** jusqu'à la **réalisation** en passant par le **codage** seront détaillées dans ce dossier.
 
 ## Sommaire
-* [1. Description du projet et détail des livrables](#PremiereSection)
-* [2. Matériel nécessaire](#DeuxiemeSection)
-* [3. Arduino](#TroisiemeSection)
-  * [3.1. Librairies utilisées](#TroisiemeSection1)
-  * [3.2. Code Arduino](#TroisiemeSection1)
-* [4. Application Android](#QuatriemeSection)
+* [1. Description du projet](#PremiereSection)
+* [2. Les livrables](#DeuxiemeSection)
+* [3. Matériel nécessaire](#TroisiemeSection)
+* [4. Simulation](#QuatriemeSection)
 * [5. KiCad](#CinquiemeSection)
-  * [5.1. Symboles et empreintes des composants](#CinquiemeSection1)
-  * [5.2. Schématique](#CinquiemeSection2)
-  * [5.3. Placement des composants](#CinquiemeSection3)
-  * [5.4. Visualisation 3D](#CinquiemeSection4)
+  * [5.1. Schématique du circuit et création des symboles et empreintes des composants](#CinquiemeSection1)
+  * [5.2. Réalisation du PCB et visualisation 3D](#CinquiemeSection2)
 * [6. Fabrication du shield](#SixiemeSection)
   * [6.1. Réalisation du PCB](#SixiemeSection1)
   * [6.2. Perçage et soudure](#SixiemeSection2)
-* [7. Simulation](#SeptiemeSection)
-* [8. Tests et résultats](#HuigtiemeSection)
-  * [8.1. Banc de test](#HuigtiemeSection1)
-  * [8.2. Résultats obtenus](#HuigtiemeSection2)
-  * [8.3. Analyse des résultats et pistes d'améliorations](#HuigtiemeSection3)
-* [9. Datasheet](#NeuviemeSection)
-* [Contacts](#DixiemeSection)
+* [7. Arduino](#SeptiemeSection)
+  * [7.1. Librairies utilisées](#SeptiemeSection1)
+  * [7.2. Code Arduino](#SeptiemeSection2)
+* [8. Application Android](#HuigtiemeSection)
+* [9. Réalisation des teste et résultats](#NeuviemeSection)
+  * [9.1. Banc de test](#NeuviemeSection1)
+  * [9.2. Résultats](#NeuviemeSection2)
+  * [9.3. Pistes d'améliorations](#NeuviemeSection3)
+* [10. Datasheet](#DixiemeSection)
+* [Contacts](#OnziemeSection)
+ 
+<div id='PremiereSection'/>
 
-## 1. Détail des livrables et description du projet <a id="PremiereSection"></a>
+## 1. Description du projet 
+
+Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du département de Génie Physique de l’INSA Toulouse. Basé sur l’article …, l’objectif de ce projet est de développer un capteur de déformation low-technologie à base de papier et de graphite. En effet, lorsque l’on déforme le papier, la distance entre les particules de graphite déposées au préalable change selon si l’on applique une tension ou une compression. Cette modification de résistance implique une modification de la conductivité de la couche de graphite. On peut ainsi mesurer une variation de résistance que l’on peut relier à la déformation.
+	Notre objectif était donc de réaliser ce capteur entièrement, c'est-à-dire que nous allions passer par toutes les étapes de sa conception en partant du design et de la fabrication du PCB jusqu’au test du capteur en passant par de la programmation.
 
 
 
-## 2. Matériel nécessaire
+<div id='DeuxiemeSection'/>
+
+## 2. Les livrables
+Pour ce projet, nous avions différents livrables à rendre avant le 17/05/2023:
+- Un shield PCB fonctionnel connecté à une carte Arduino UNO. Le PCB doit nécessairement contenir un amplificateur transimpédance, un capteur bluetooth, un écran OLED. Il peut également contenir un flex sensor, un potentiomètre digital et un encodeur rotatoir. 
+- Un code Arduino permettant de gérer le module bluetooth ainsi que les mesures du capteur de déformation. Si présent sur le shield, le code doit aussi prendre en compte l’écran OLED ainsi que l’encodeur rotatoir. 
+- Une application Android APK développée à l’aide du site MIT app inventor. 
+- Un protocole de calibration du capteur
+- Une datasheet du capteur de déformation développé
+
+Dans notre cas, nous avons choisi d'implémenter en plus du capteur Bluetooth et de l’écran OLED sur notre shield, le flex sensor afin de pouvoir comparer notre capteur avec un capteur industriel et l’encodeur rotatoir afin de pouvoir sélectionner différents modes de mesure pour notre capteur. 
+
+<div id='TroisiemeSection'/>
+
+## 3. Matériel nécessaire 
 Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composants nécessaires :
-* x2 résistance 100kΩ
-* x1 résistance 10kΩ
-* x2 résistance 1kΩ
-* x1 capacité 1μF
-* x3 capacité 100nF
-* x1 amplificateur opérationnel LTC1050
-* x1 module Bluetooth HC05
-* x1 encodeur rotatoire KY_040
-* x1 écran OLED I2C 0.91
 
-## 3. Arduino <a id="TroisiemeSection"></a>
-### 3.1. Librairies utilisées <a id="TroisiemeSection1"></a>
+* Résistances : 2 de 1 kOhms, 2 de 10 kOhms, 2 de 100 kOhms
+* Capacités : 2 de 100 nF, 1 de 1 uF
+* Arduino Uno
+* Amplificateur opérationnel LTC1050
+* Module Bluetooth HC05
+* Encodeur rotatoire KY_040
+* Ecran OLED 128x64
+* Flex Sensor
+ 
+<div id='QuatriemeSection'/>
 
-### 3.2. Code Arduino <a id="TroisiemeSection2"></a>
-
-
-#### Code Graphite_sensor
+## 4. Simulation 
 
 
-#### Code Angle_calibration
+<div id='CinquiemeSection'/>
 
+## 5. KiCad 
+<div id='CinquiemeSection1'/>
 
-## 4. Application Android <a id="QuatriemeSection"></a>
+### 5.1. Schématique du circuit et création des symboles et empreintes des composants 
+La première étape du KICAD a été de réaliser la schématique du circuit, basé sur la simulation réalisée précédemment. Pour cela, nous avons tout d’abord importé le schéma de l’Arduino Uno qui existe déjà sur KiCAD. Nous avons été ensuite amenés à créer les symboles pour les composants non-existants sur LTSpice, ainsi que leur empreinte sur le PCB. Voici ci-dessous les différentes symboles avec leur empreinte associé:
 
-
-## 5. KiCad <a id="CinquiemeSection"></a>
-### 5.1. Symboles et empreintes des composants <a id="CinquiemeSection1"></a>
 * Amplificateur LTC1050
 
 
@@ -79,49 +90,76 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 * Module bluetooth HC05
 
 
+Pour les résistances nous avons choisi comme empreinte la Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal, excepté pour R2 pour laquelle nous avons pris la même empreinte mais à la verticale (elle a donc été placée à la japonaise). Concernant les capacités, C1 et C2 possède comme empreinte Capacitor_THT: C_Disc_D3.0mm_W1.6mm_P2.50mm, tandis que C4 a pour empreinte Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm.
+Voici ci-dessous le schéma de la schématique du circuit réalisé sur KiCAD:
 
 
-### 5.2. Schématique <a id="CinquiemeSection2"></a>
 
+<div id='CinquiemeSection2'/>
 
-
-### 5.3. Placement des composants <a id="CinquiemeSection3"></a>
-
-### 5.4. Visualisation 3D <a id="CinquiemeSection4"></a>
-
-## 6. Fabrication du shield <a id="SixiemeSection"></a>
-
-### 6.1. Réalisation du PCB <a id="SixiemeSection1"></a> 
-
-  
-### 6.2. Perçage et soudure <a id="SixiemeSection2"></a> 
-
-
-## 7. Simulation <a id="SeptiemeSection"></a> 
-
-
-## 8. Tests et résultats <a id="HuigtiemeSection"></a> 
-### 8.1. Banc de test <a id="HuigtiemeSection1"></a> 
+### 5.2. Réalisation du PCB et visualisation 3D 
 
 
 
 
-### 8.2. Résultats obtenus <a id="SeptiemeSection2"></a> 
+<div id='SixiemeSection'/>
+
+## 6. Fabrication du shield 
+<div id='SixiemeSection1'/>
+
+### 6.1. Réalisation du PCB 
 
 
-### 8.3. Analyse des résultats et pistes d'améliorations <a id="HuigtiemeSection3"></a> 
+<div id='SixiemeSection2'/>
 
+### 6.2. Perçage et soudure 
+
+
+<div id='SeptiemeSection'/>
+
+## 7. Arduino 
+<div id='SeptiemeSection1'/>
+
+### 7.1. Librairies utilisées 
+
+<div id='SeptiemeSection2'/>
+
+### 7.2. Code Arduino 
+
+
+
+<div id='HuigtiemeSection'/>
+
+## 8. Application Android 
+
+
+<div id='NeuviemeSection'/>
+
+## 9. Réalisation des teste et résultats 
+<div id='NeuviemeSection1'/>
+
+### 9.1. Banc de test 
+
+<div id='NeuviemeSection2'/>
+
+### 9.2. Résultats
+
+<div id='NeuviemeSection3'/>
  
+### 9.3. Pistes d'améliorations
+
 #### Comparaison avec le Flex-Sensor SEN-10264
 
 
- 
+<div id='DixiemeSection'/>
 
- 
-#### Pistes d'améliorations 
-
-  
-## 9. Datasheet <a id="NeuviemeSection"></a> 
+## 10. Datasheet
 
 
-## Contacts <a id="DixiemeSection"></a> 
+
+<div id='OnziemeSection'/>
+
+## Contacts 
+
+
+
