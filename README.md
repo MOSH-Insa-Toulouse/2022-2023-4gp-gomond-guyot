@@ -1,10 +1,9 @@
-# 2022-2023-4gp-gomond-guyot
-Projet Capteur
-
+# Projet Capteur
 ***
 <p align="center"><img width="550" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/capteur_graphite.jpg">
 
-L'ensemble des étapes menées pour réaliser ce capteur, en allant du **design** jusqu'à la **réalisation** en passant par le **codage** seront détaillées dans ce dossier.
+***
+
 
 ## Sommaire
 * [1. Description du projet](#PremiereSection)
@@ -40,25 +39,29 @@ Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du d�
 <div id='DeuxiemeSection'/>
 
 ## 2. Les livrables
-Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composants nécessaires :
-* x2 résistance 100kΩ
-* x1 résistance 10kΩ
-* x2 résistance 1kΩ
-* x1 capacité 1μF
-* x3 capacité 100nF
-* x1 amplificateur opérationnel LTC1050
-* x1 module Bluetooth HC05
-* x1 encodeur rotatoire KY_040
-* x1 écran OLED I2C 0.91
+Pour ce projet, nous avions différents livrables à rendre avant le 17/05/2023:
+- Un shield PCB fonctionnel connecté à une carte Arduino UNO. Le PCB doit nécessairement contenir un amplificateur transimpédance, un capteur bluetooth, un écran OLED. Il peut également contenir un flex sensor, un potentiomètre digital et un encodeur rotatoir. 
+- Un code Arduino permettant de gérer le module bluetooth ainsi que les mesures du capteur de déformation. Si présent sur le shield, le code doit aussi prendre en compte l’écran OLED ainsi que l’encodeur rotatoir. 
+- Une application Android APK développée à l’aide du site MIT app inventor. 
+- Un protocole de calibration du capteur
+- Une datasheet du capteur de déformation développé
+
+Dans notre cas, nous avons choisi d'implémenter en plus du capteur Bluetooth et de l’écran OLED sur notre shield, le flex sensor afin de pouvoir comparer notre capteur avec un capteur industriel et l’encodeur rotatoir afin de pouvoir sélectionner différents modes de mesure pour notre capteur. 
 
 <div id='TroisiemeSection'/>
 
 ## 3. Matériel nécessaire 
+Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composants nécessaires :
 
-
+* Résistances : 2 de 1 kOhms, 2 de 10 kOhms, 2 de 100 kOhms
+* Capacités : 2 de 100 nF, 1 de 1 uF
+* Arduino Uno
+* Amplificateur opérationnel LTC1050
+* Module Bluetooth HC05
+* Encodeur rotatoire KY_040
+* Ecran OLED 128x64
+* Flex Sensor
  
-
-
 <div id='QuatriemeSection'/>
 
 ## 4. Simulation 
