@@ -121,22 +121,19 @@ Afin de visualiser en 3D notre composant et pouvoir voir la place que prend chaq
 <div id='SixiemeSection'/>
 
 ## 6. Fabrication du shield 
+<div id='SixiemeSection1'/>
+
+### 6.1. Réalisation du PCB 
+
 Le PCB a été réalisé par Catherine CROUZET du département du Génie Physique de l’INSA Toulouse à l’aide du matériel du département du Génie Physique et du département	Électrique et Informatique. Avant impression, l’empreinte du PCB a été vérifiée par Mme CROUZET qui a ensuite imprimé sur papier le calque de modélisation issu du PCB réalisé sur KiCAD.
  Nous sommes parti d’une plaquette d'époxy couverte d’une couche de cuivre d’environ  60µm sur laquelle nous avons appliqué notre calque qui a permis de tracer les pistes sur la plaquette du PCB à l’aide d’une insolation UV. Une fois les pistes tracées, elles sont ensuite révélées à l’aide d’un révélateur qui après quelques minutes, retire la résine non éclairée pas les UV. La plaquette est ensuite placée dans un bain de perchlorure de fer pendant 7 minutes afin de réaliser la gravure du PCB. Lors de cette étape, le cuivre non protégé par la résine est retiré. Nous obtenons alors le PCB comme désigné sur KiCAD. On applique pour terminer un peu d’acétone afin de retirer les dernières traces de résines encore présentes.
  
  <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/Shilde.jpg"> <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/shilde2.jpg">
  
-Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis la soudure des composants. Pour cela nous avons utilisé la perceuse électrique mise à disposition aux étudiants du Génie Physique. Les tailles de forêts ont été choisies en fonction des tailles de trous de perçage designé sur KiCAD (c’est à dire 0,8mm ou 1mm de diamètre selon les composants). Une fois tous les composants soudés sur la face avant, nous avons pu connecter le PCB à l’Arduino Uno. 
-
-<div id='SixiemeSection1'/>
-
-### 6.1. Réalisation du PCB 
-
-
-<div id='SixiemeSection2'/>
+ <div id='SixiemeSection2'/>
 
 ### 6.2. Perçage et soudure 
-
+Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis la soudure des composants. Pour cela nous avons utilisé la perceuse électrique mise à disposition aux étudiants du Génie Physique. Les tailles de forêts ont été choisies en fonction des tailles de trous de perçage designé sur KiCAD (c’est à dire 0,8mm ou 1mm de diamètre selon les composants). Une fois tous les composants soudés sur la face avant, nous avons pu connecter le PCB à l’Arduino Uno. 
 
 <div id='SeptiemeSection'/>
 
@@ -144,17 +141,39 @@ Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis l
 <div id='SeptiemeSection1'/>
 
 ### 7.1. Librairies utilisées 
+Pour la réalisation du code Arduino nous avons utiliser deux librairies qui sont **"SoftwareSerial.h"** pour réaliser un software serial sur deux pin pour l'utilisation du modude bluetooth. La deuxième est **"Adafruit_SSD1306.h"** qui sert pour l'utilisation de l'écran OLED.
+
 
 <div id='SeptiemeSection2'/>
 
 ### 7.2. Code Arduino 
+Nous avons réaliser deux code Arduino dans ce projet. Le premier permet de controler le capteur et tout ces composants. Le deuxième sert lors de la procédure de calibration.
 
+#### Code pour le Capteur 
+Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/Programme_finaleVFinale.ino) est le coeur du fonctionnement du capteur. 
+-Il permet tout d'abord récupérer les valeurs de tension en sortie de l'amplificateur et de réaliser les différents calcules pour retrouver la résistance de notre capteur.
+-Il permet également le contrôle et l'utiisaton des différents éléments ajouter sur le shield:
+	* il y a le module Bluetooth qui permet d'envoyer la valeur de tension lu et de l'envoyer à l'application android.
+	* il y a l'encodeur rotatoire ou nous avons grâce à lui réaliser trois menues en fonction de la ou on se trouve dans la plage de valeurs de l'encodeur. Il y a un menue avec un mode de lecteur continue de la résistance. Un mode ou un réaliser une moyenne sur 200 valeurs de la résistance. Un mode pour afficher la lecture du flex sensor. Tout ces menues sont visible sur l'écran OLED.
+	* il y a l'écran OLED qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menue que nous avons choisi. Le menue ou nous somme est également affiché.
+	
+<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_continue.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_moyenne.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/flex_sensor2.jpg">
 
+#### Code pour la calibration
+Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/programme_calibration.ino) permet de contrôler un Cervo-Moteur qui va se positionner à différent angles déterminés (0, 30, 60, 90, 120). Il va attendre 2 secondes à chaques position pour nous permettre de lire la valeurs. La procédure est activé grâce à un bouton poussoir et pendant que le cervo-moteur est en mouvement une led est allumée.
 
 <div id='HuigtiemeSection'/>
 
 ## 8. Application Android 
+Nous avons développé une application Android fonctionnant à l’aide du module Bluetooth HC-05. L’application se présente comme ci-dessous: 
 
+<p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/app_bluetooth.jpg">
+
+L’application possède un menu de sélection Bluetooth permettant de choisir à quel module Bluetooth se connecter. Une fois connecté, le code Arduino envoie via le module la valeur de tension en sortie du circuit V(ADC) en Volt sous forme d’un byte à l’application. L’application convertit ces valeurs tout d’abord en float, puis en résistance en M𝛺 à l’aide de la formule: 
+
+<p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/formule.png">
+	
+Le schéma fonctionnel du programme derrière l’application est visible sous ce lien: [LIEN APK](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/app/Application_Projet.aia)
 
 <div id='NeuviemeSection'/>
 
@@ -177,12 +196,14 @@ Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis l
 <div id='DixiemeSection'/>
 
 ## 10. Datasheet
-
-
+La datasheet du capteur est disponible [ici](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/Datasheet.pdf)
 
 <div id='OnziemeSection'/>
 
 ## Contacts 
+Nous somme disponibles pour toute question sur le projet, n'hesitez pas à nous contacter.
 
+-GUYOT Adrien : aguyot@etud.insa-toulouse.fr
+-GOMOND François : fgomond@insa-toulouse.fr
 
 
