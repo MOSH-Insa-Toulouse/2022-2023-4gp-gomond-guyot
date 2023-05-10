@@ -247,6 +247,7 @@ La datasheet du capteur est disponible [ici](https://github.com/MOSH-Insa-Toulou
 Nous somme disponibles pour toute question sur le projet, n'hesitez pas à nous contacter.
 
 -GUYOT Adrien : aguyot@etud.insa-toulouse.fr
+
 -GOMOND François : fgomond@insa-toulouse.fr
 
 
