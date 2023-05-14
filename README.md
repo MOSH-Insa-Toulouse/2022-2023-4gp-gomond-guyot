@@ -64,6 +64,7 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 ## 4. Simulation 
 
+<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/LTSPICE%20SCHEME.PNG">
 
 <div id='CinquiemeSection'/>
 
@@ -113,7 +114,7 @@ Pour le PCB, nous avions pour contrainte de n’imprimer que sur une seule face.
 
 Le plan en bleu est le plan de masse. Les PADS sont de formes circulaires de 2mm de diamètre avec une forme de perçage circulaire de 1mm pour l’Arduino et le capteur de déformation et 0,8mm pour le reste. Les largeurs de pistes sont de 1mm et l’isolation entre les pistes et le plan de masse est de 0,3mm. Nous avons choisi ces derniers paramètres afin de faciliter l’étape de soudure.
 	
-Afin de visualiser en 3D notre composant et pouvoir voir la place que prend chaque composant, nous avons dû, pour les empreintes qie nous avons créées, utiliser le site internet GrabCADafin de récupérer le fichier 3D de nos composants. Voici-ci dessous la visualisation 3D du PCB réalisé: 
+Afin de visualiser en 3D notre composant et pouvoir voir la place que prend chaque composant, nous avons dû, pour les empreintes que nous avons créées, utiliser le site internet GrabCADafin de récupérer le fichier 3D de nos composants. Voici-ci dessous la visualisation 3D du PCB réalisé: 
 	
 <p align="center"><img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/3D.jpg">
 
