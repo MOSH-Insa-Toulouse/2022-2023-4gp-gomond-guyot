@@ -64,7 +64,7 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 
 ## 4. Simulation 
 
-<img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/LTSPICE%20SCHEME.PNG">
+<img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/LTSPICE%20SCHEME.PNG">
 
 <div id='CinquiemeSection'/>
 
