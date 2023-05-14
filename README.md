@@ -227,7 +227,8 @@ En fonction du type de crayon utilisé, les variations relatives de résistance 
 <div id='NeuviemeSection3'/>
  
 ### 9.3. Pistes d'améliorations
-Plusieurs pistes d’améliorations pour ce capteur sont possibles. Tout d’abord, comme nous avons pu l’expérimenter, la répétabilité du capteur est peu fiable dû aux plusieurs facteurs: 
+Plusieurs pistes d’améliorations pour ce capteur sont possibles. Tout d’abord, comme nous avons pu l’expérimenter, la répétabilité du capteur est peu fiable dû aux plusieurs facteurs:
+
 -Le dépôt de la quantité de graphite n’est pas contrôlée, et cette quantité diminue au cours du temps avec l’air alentour.
 
 -Le papier s’use assez rapidement et ne peut pas supporter des déformations trop importantes.
