@@ -156,7 +156,7 @@ Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/
 	
    * il y a le **module Bluetooth** qui permet d'envoyer la valeur de tension lue et de l'envoyer à l'application Android.
 	
-   * il y a **l'encodeur rotatoire** où nous avons grâce à lui réaliser trois menus en fonction d'où l'on se trouve dans la plage de valeurs de l'encodeur. Il y a un menu avec un mode de lecteur continu de la résistance, un autre mode qui réalise une moyenne sur 200 valeurs de la résistance et n mode pour afficher la lecture du flex sensor. Tout ces menus sont visible sur l'écran OLED.
+   * il y a **l'encodeur rotatoir** où nous avons grâce à lui réaliser trois menus en fonction d'où l'on se trouve dans la plage de valeurs de l'encodeur. Il y a un menu avec un mode de lecteur continu de la résistance, un autre mode qui réalise une moyenne sur 200 valeurs de la résistance et n mode pour afficher la lecture du flex sensor. Tout ces menus sont visible sur l'écran OLED.
 	
    * il y a **l'écran OLED** qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menu que nous avons choisi. Le menu où nous sommes est également affiché.
 	
