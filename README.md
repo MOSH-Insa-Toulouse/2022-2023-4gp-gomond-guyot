@@ -226,6 +226,14 @@ En fonction du type de crayon utilisé, les variations relatives de résistance 
 <div id='NeuviemeSection3'/>
  
 ### 9.3. Pistes d'améliorations
+Plusieurs pistes d’améliorations pour ce capteur sont possibles. Tout d’abord, comme nous avons pu l’expérimenter, la répétabilité du capteur est peu fiable dû aux plusieurs facteurs: 
+-Le dépôt de la quantité de graphite n’est pas contrôlée, et cette quantité diminue au cours du temps avec l’air alentour.
+
+-Le papier s’use assez rapidement et ne peut pas supporter des déformations trop importantes.
+
+Ainsi, on pourrait essayer de réaliser une méthode afin de déposer une quantité contrôlée de graphite sur le papier, ainsi que choisir un papier plus élastique. 
+Un autre ajout possible sur la partie hardware du capteur serait le potentiomètre digital qui permettrait d’adapter la tension de sortie du capteur en fonction de la résistance du capteur. 
+La partie banc de tests pourrait être améliorée en réalisant des tests sur des cylindres solides imprimés en 3D et avec plus de tailles différentes afin d’obtenir plus de données pour tracer nos courbes.
 
 
 #### Comparaison avec le Flex-Sensor SEN-10264
