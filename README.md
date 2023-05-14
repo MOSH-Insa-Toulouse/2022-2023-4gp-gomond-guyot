@@ -20,7 +20,7 @@
   * [7.1. Librairies utilisées](#SeptiemeSection1)
   * [7.2. Code Arduino](#SeptiemeSection2)
 * [8. Application Android](#HuigtiemeSection)
-* [9. Réalisation des teste et résultats](#NeuviemeSection)
+* [9. Réalisation des tests et résultats](#NeuviemeSection)
   * [9.1. Banc de test](#NeuviemeSection1)
   * [9.2. Résultats](#NeuviemeSection2)
   * [9.3. Pistes d'améliorations](#NeuviemeSection3)
@@ -31,7 +31,7 @@
 
 ## 1. Description du projet 
 
-Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du département de Génie Physique de l’INSA Toulouse. Basé sur l’article …, l’objectif de ce projet est de développer un capteur de déformation low-technologie à base de papier et de graphite. En effet, lorsque l’on déforme le papier, la distance entre les particules de graphite déposées au préalable change selon si l’on applique une tension ou une compression. Cette modification de résistance implique une modification de la conductivité de la couche de graphite. On peut ainsi mesurer une variation de résistance que l’on peut relier à la déformation.
+Ce projet à lieu dans le cadre de l’UF “Du capteur au banc de test” du département de Génie Physique de l’INSA Toulouse. Basé sur l’article "Pencil Drawn Strain Gauges and Chemiresistor on paper" publié sur Scientific Report en 2014, l’objectif de ce projet est de développer un capteur de déformation low-technologie à base de papier et de graphite. En effet, lorsque l’on déforme le papier, la distance entre les particules de graphite déposées au préalable change selon si l’on applique une tension ou une compression. Cette modification de résistance implique une modification de la conductivité de la couche de graphite. On peut ainsi mesurer une variation de résistance que l’on peut relier à la déformation.
 Notre objectif était donc de réaliser ce capteur entièrement, c'est-à-dire que nous allions passer par toutes les étapes de sa conception en partant du design et de la fabrication du PCB jusqu’au test du capteur en passant par de la programmation.
 
 <div id='DeuxiemeSection'/>
@@ -108,7 +108,7 @@ Voici ci-dessous le schéma de la schématique du circuit réalisé sur KiCAD:
 <div id='CinquiemeSection2'/>
 
 ### 5.2. Réalisation du PCB et visualisation 3D 
-Pour le PCB, nous avions pour contrainte de n’imprimer que sur une seule face. Il a donc fallu optimiser autant que possible les connexions entre les différents composés afin de limiter la présence de PADs. Nous avons réussi à n’avoir besoin que d'un seul PADs sur notre PCB, qui, n’ayant pas de face arrière, s’est traduit par la connexion du PADS à l’aide d’un fil de résistance. Voici ci-dessous l’empreinte du PCB réalisé:
+Pour le PCB, nous avions pour contrainte de n’imprimer que sur une seule face. Il a donc fallu optimiser autant que possible les connexions entre les différents composés afin de limiter la présence de PADs. Nous avons réussi à n’avoir besoin que d'un seul PAD sur notre PCB, qui, n’ayant pas de face arrière, s’est traduit par la connexion du PAD à l’aide d’un fil de résistance. Voici ci-dessous l’empreinte du PCB réalisé:
 
 <p align="center"><img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/PCB.jpg">
 
@@ -151,19 +151,19 @@ Nous avons réaliser deux code Arduino dans ce projet. Le premier permet de cont
 
 #### Code pour le Capteur 
 Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/Programme_finaleVFinale.ino) est le coeur du fonctionnement du capteur. 
--Il permet tout d'abord récupérer les valeurs de tension en sortie de l'amplificateur et de réaliser les différents calcules pour retrouver la résistance de notre capteur.
--Il permet également le contrôle et l'utiisaton des différents éléments ajouter sur le shield:
+-Il permet tout d'abord récupérer les valeurs de tension en sortie de l'amplificateur et de réaliser les différents calculs pour retrouver la résistance de notre capteur.
+-Il permet également le contrôle et l'utilisaton des différents éléments ajoutés sur le shield:
 	
-   * il y a le **module Bluetooth** qui permet d'envoyer la valeur de tension lu et de l'envoyer à l'application android.
+   * il y a le **module Bluetooth** qui permet d'envoyer la valeur de tension lue et de l'envoyer à l'application Android.
 	
-   * il y a **l'encodeur rotatoire** ou nous avons grâce à lui réaliser trois menues en fonction de la ou on se trouve dans la plage de valeurs de l'encodeur. Il y a un menue avec un mode de lecteur continue de la résistance. Un mode ou un réaliser une moyenne sur 200 valeurs de la résistance. Un mode pour afficher la lecture du flex sensor. Tout ces menues sont visible sur l'écran OLED.
+   * il y a **l'encodeur rotatoire** où nous avons grâce à lui réaliser trois menus en fonction d'où l'on se trouve dans la plage de valeurs de l'encodeur. Il y a un menu avec un mode de lecteur continu de la résistance, un autre mode qui réalise une moyenne sur 200 valeurs de la résistance et n mode pour afficher la lecture du flex sensor. Tout ces menus sont visible sur l'écran OLED.
 	
-   * il y a **l'écran OLED** qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menue que nous avons choisi. Le menue ou nous somme est également affiché.
+   * il y a **l'écran OLED** qui permet d'afficher la valeur de la résistance de notre capteur ou du flex sensor en fonction du menu que nous avons choisi. Le menu où nous sommes est également affiché.
 	
 <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_continue.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/mode_moyenne.jpg"> <img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/flex_sensor2.jpg">
 
 #### Code pour la calibration
-Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/programme_calibration.ino) permet de contrôler un Cervo-Moteur qui va se positionner à différent angles déterminés (0, 30, 60, 90, 120). Il va attendre 2 secondes à chaques position pour nous permettre de lire la valeurs. La procédure est activé grâce à un bouton poussoir et pendant que le cervo-moteur est en mouvement une led est allumée.
+Ce [code](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/arduino/programme_calibration.ino) permet de contrôler un Servo-Moteur qui va se positionner à différent angles déterminés (0, 30, 60, 90, 120). Il va attendre 2 secondes à chaques position pour nous permettre de lire la valeur. La procédure est activée grâce à un bouton poussoir et pendant que le servo-moteur est en mouvement une LED est allumée.
 
 <div id='HuigtiemeSection'/>
 
@@ -172,7 +172,7 @@ Nous avons développé une application Android fonctionnant à l’aide du modul
 
 <p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/app_bluetooth.jpg">
 
-L’application possède un menu de sélection Bluetooth permettant de choisir à quel module Bluetooth se connecter. Une fois connecté, le code Arduino envoie via le module la valeur de tension en sortie du circuit V(ADC) en Volt sous forme d’un byte à l’application. L’application convertit ces valeurs tout d’abord en float, puis en résistance en M𝛺 à l’aide de la formule: 
+L’application possède un menu de sélection bluetooth permettant de choisir à quel module bluetooth se connecter. Une fois connecté, le code Arduino envoie via le module la valeur de tension en sortie du circuit V(ADC) en Volt sous forme d’un byte à l’application. L’application convertit ces valeurs tout d’abord en float, puis en résistance en M𝛺 à l’aide de la formule: 
 
 <p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/formule.png">
 	
@@ -180,14 +180,14 @@ Le schéma fonctionnel du programme derrière l’application est visible sous c
 
 <div id='NeuviemeSection'/>
 
-## 9. Réalisation des teste et résultats 
+## 9. Réalisation des tests et résultats 
 <div id='NeuviemeSection1'/>
 
 ### 9.1. Banc de test 
-Pour réaliser les différents tests de calibration nous avons réaliser deux banc de test pour avoir une calibration en fonction de la déformation et en fonction de l'angle. Nous avons réaliser les deux calibrations car nous avons trouvé, sur le point physique, intéressant de la réaliser en fonction de la déformation de la couche de graphyte. Mais sur l'aspect utilisation du capteur, il est plus utile et intéressant de connaitre la résistance en fonction de l'angle que fait le capteur.
+Pour réaliser les différents tests de calibration nous avons réaliser deux bancs de tests pour avoir une calibration en fonction de la déformation et en fonction de l'angle. Nous avons réaliser les deux calibrations car nous avons trouvé, sur le point physique, intéressant de la réaliser en fonction de la déformation de la couche de graphite. Mais sur l'aspect utilisation du capteur, il est plus utile et intéressant de connaitre la résistance en fonction de l'angle que fait le capteur.
 
 #### Banc de test pour la calibration en fonction de la deformation
-Pour cette methodes nous avons découper des cercles de différents rayon de courbure (1, 2, 4, 6) comme montrée ci dessous.
+Pour cette methode nous avons découpé des cercles de différents rayons de courbure (1, 2, 4 et 6 cm) comme montrée ci dessous.
 
 <p align="center"><img width="300" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/calibration_deformation.jpg">
 	
@@ -197,7 +197,7 @@ Ce rayon de courbure nous permet de remonter à la déformation ε gracce à la 
 
 
 #### Banc de test pour la calibration en fonction de l'angle
-Pour cette methode nous avons utiliser un module en bois  qui était fournis pas nos professeur ainsi qu'un cervo-moteur. Nous utilison le code décrit à la partit 7.2 pour la calibration. Le cervo-moteur tors le capteur à différents angles prés definit.
+Pour cette methode nous avons utilisé un module en bois  qui était fournis par le département ainsi qu'un servo-moteur. Nous utilisons le code décrit à la partie 7.2 pour la calibration. Le servo-moteur tord le capteur à différents angles prédéfinis.
 	
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/callibration_angle.jpg"> <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/callibration_angle2.jpg">
 
@@ -205,29 +205,29 @@ Pour cette methode nous avons utiliser un module en bois  qui était fournis pas
 <div id='NeuviemeSection2'/>
 
 ### 9.2. Résultats
-Les résultats complet on été réalisé sur exel dans le dossier [result.](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/result/calcules_deformation.xlsx) Sinon voici les différentes courbes de callibrations en fonction de l'ange et de la déformation.
-Nous avons réaliser les mesures en fonction de la déformation en compression et en tension. Pour les mesures en fonction de l'angle, nous avons réaliser seulement la compression car les résultats que nous avons obtenue en tension n'était pas exploitable.
+Les résultats complets ont été réalisé sur Exel dans le dossier [result.](https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/result/calcules_deformation.xlsx) Sinon voici les différentes courbes de calibration en fonction de l'angle et de la déformation.
+Nous avons réalisé les mesures en fonction de la déformation en compression et en tension. Pour les mesures en fonction de l'angle, nous avons réalisé seulement la compression car les résultats que nous avons obtenu en tension n'était pas exploitables.
 
-* Variation de la résistance en function de la deformation (tension)
+* Variation de la résistance en fonction de la deformation (tension)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
 
-* Variation de la résistance en function de la deformation (compression)
+* Variation de la résistance en fonction de la deformation (compression)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_compression.png">
 
-* Variation de la résistance en function de l'angle (compression)
+* Variation de la résistance en fonction de l'angle (compression)
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
 
-Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va s'étirer ce qui va augmenter la distance entre les différents atomes de carbon et ainsi augmenter la résitance du capteur.
-Lorsque nous travaillons en tension, il se passe l'opposé, les atomes de carbon vont se rapprocher et la résistance du capteur va diminuer.
+Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va s'étirer ce qui va augmenter la distance entre les différents atomes de Carbone et ainsi augmenter la résitance du capteur.
+Lorsque nous travaillons en tension, il se passe l'opposé. Les atomes de Carbone vont se rapprocher et la résistance du capteur va diminuer.
 En fonction du type de crayon utilisé, les variations relatives de résistance changent. En effet, plus le crayon est gras, c'est à dire qu'il dépose plus de graphite, moins sa variation relative de résistance est élevée. Nous pouvons vérifier cela sur les différentes courbes que nous avons obtenu.
 
 <div id='NeuviemeSection3'/>
  
 ### 9.3. Pistes d'améliorations
-Plusieurs pistes d’améliorations pour ce capteur sont possibles. Tout d’abord, comme nous avons pu l’expérimenter, la répétabilité du capteur est peu fiable dû aux plusieurs facteurs:
+Plusieurs pistes d’améliorations pour ce capteur sont possibles. Tout d’abord, comme nous avons pu l’expérimenter, la répétabilité du capteur est peu fiable dû à plusieurs facteurs:
 
 -Le dépôt de la quantité de graphite n’est pas contrôlée, et cette quantité diminue au cours du temps avec l’air alentour.
 
@@ -244,7 +244,7 @@ La partie banc de tests pourrait être améliorée en réalisant des tests sur d
 
 <img width="400" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbes_flex_compression.png">
 
-Pour comparer la sensibilité des deux capteurs, nous pouvons comparer les coefficients directeur du flex sensor avec celui du capteur de contrainte HB sur la compression. Pour le flex sensor, nous avons obtenu un coefficient de -1.891/° tandis que pour le capteur de contrainte HB nous avons -0.24/°. On peu donc dire que le flex sensor et beaucoup plus sensible à la déformation que notre capteur de contrainte en graphite. Le flex sensor pourrait être plus utile pour detecter de petites déformations grâce à ca plus grande sensibilité. A coté de cela, notre capteur en graphite à plus de dificulté à détecter les petites déformation ou les petit angles. Il serait plus utile pour savoir si il est plié ou non.
+Pour comparer la sensibilité des deux capteurs, nous pouvons comparer les coefficients directeur du flex sensor avec celui du capteur de contrainte HB sur la compression. Pour le flex sensor, nous avons obtenu un coefficient de -1.891/° tandis que pour le capteur de contrainte HB nous avons -0.24/°. On peu donc dire que le flex sensor est beaucoup plus sensible à la déformation que notre capteur de contrainte en graphite. Le flex sensor pourrait être plus utile pour detecter de petites déformations grâce à sa plus grande sensibilité. A coté de cela, notre capteur en graphite à plus de difficulté à détecter les petites déformation où les petit angles. Il serait plus utile pour savoir s'il est plié ou non.
 
 <div id='DixiemeSection'/>
 
@@ -254,7 +254,7 @@ La datasheet du capteur est disponible [ici](https://github.com/MOSH-Insa-Toulou
 <div id='OnziemeSection'/>
 
 ## Contacts 
-Nous somme disponibles pour toute question sur le projet, n'hesitez pas à nous contacter.
+Nous sommes disponibles pour toute question sur le projet, n'hesitez pas à nous contacter.
 
 -GUYOT Adrien : aguyot@etud.insa-toulouse.fr
 
