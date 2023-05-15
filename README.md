@@ -63,8 +63,24 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='QuatriemeSection'/>
 
 ## 4. Simulation 
+Le but de réaliser en amont la simulation LTSpice du circuit intégré au capteur est de vérifier en théorie qu’il a bien été conçu, c’est-à-dire que l’on a un signal de sortie qui correspond à ce que l’on souhaite avoir pour ensuite pouvoir le traiter à l’aide de l’Arduino UNO. On peut peut l’utiliser également pour vérifier l’impact des différents composants et déterminer les valeurs de résistances, capacités nécessaires pour avoir la tension de sortie souhaitée. Dans notre cas, n’ayant pas conçu le circuit de nous même, nous avons simplement vérifié à l’aide de LTSpice qu’il correspondait à ce dont nous avions besoin pour réaliser pour amplifier le signal du capteur.
+
+Pour cela, nous avons tout d’abord reproduit le circuit sur LTSpice comme montré ci-dessous:
 
 <img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/LTSPICE%20SCHEME.PNG">
+
+
+Nous avons ensuite réalisé deux types de simulation: .tran (qui correspond à un signal transient en entrée du circuit) et .ac (qui correspond à un signal continu en entrée du circuit). La première simulation a pour but de vérifier que le signal en sortie V(ADC) du circuit est suffisamment amplifié pour que l’Arduino UNO puisse mesurer sa valeur. On cherche à avoir une tension de l’ordre du Volt. Le circuit est bien conçu puisqu’on observe sur une simulation de 12s que le signal est amplifié jusqu’à 1 Volt.
+
+<img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/TRAN12.PNG">
+
+
+La seconde simulation est due à la présence de trois filtres passe-bas dans le circuit visant à réduire les bruits parasitant le signal de sortie. En réalisant une simulation .ac nous pouvons ainsi afficher le diagramme de Bode de chaque filtre passe-bas et afin de trouver les fréquences de coupure des différents filtres. Nous avons d’abord vérifié la fréquence de coupure des différents filtres (de 1,6 Hz, 16 Hz et 1,6 kHz) puis vérifié leur efficacité en réalisant une simulation .ac en introduisant un bruit de 50 Hz.
+
+<img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/BODE.PNG">
+
+
+On observe qu’à 50 Hz, le signal est atténué de 78 dB. Le bruit est donc bien filtré.
 
 <div id='CinquiemeSection'/>
 
