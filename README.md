@@ -260,7 +260,7 @@ La partie banc de tests pourrait être améliorée en réalisant des tests sur d
 
 <img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbes_flex_compression.png">
 
-Pour comparer la sensibilité des deux capteurs, nous pouvons comparer les coefficients directeur du flex sensor avec celui du capteur de contrainte HB sur la compression. Pour le flex sensor, nous avons obtenu un coefficient de -1.891/° tandis que pour le capteur de contrainte HB nous avons -0.24/°. On peu donc dire que le flex sensor est beaucoup plus sensible à la déformation que notre capteur de contrainte en graphite. Le flex sensor pourrait être plus utile pour detecter de petites déformations grâce à sa plus grande sensibilité. A coté de cela, notre capteur en graphite à plus de difficulté à détecter les petites déformation où les petit angles. Il serait plus utile pour savoir s'il est plié ou non.
+Pour comparer la sensibilité des deux capteurs, nous pouvons comparer les coefficients directeur du flex sensor avec celui du capteur de contrainte HB sur la compression. Pour le flex sensor, nous avons obtenu un coefficient de -2.27/° tandis que pour le capteur de contrainte HB nous avons -0.24/°. On peu donc dire que le flex sensor est beaucoup plus sensible à la déformation que notre capteur de contrainte en graphite. Le flex sensor pourrait être plus utile pour detecter de petites déformations grâce à sa plus grande sensibilité. A coté de cela, notre capteur en graphite à plus de difficulté à détecter les petites déformation où les petit angles. Il serait plus utile pour savoir s'il est plié ou non.
 
 <div id='DixiemeSection'/>
 
