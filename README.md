@@ -234,7 +234,7 @@ Nous avons réalisé les mesures en fonction de la déformation en compression e
 
 * Variation de la résistance en fonction de l'angle (compression)
 
-<img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbe_deformation_tension_.png">
+<img width="1000" alt="image" src="https://github.com/MOSH-Insa-Toulouse/2022-2023-4gp-gomond-guyot/blob/main/photos/courbes_angle_compression.png">
 
 Quand nous travaillons en tension, la monocouche de graphite déposé sur le papier va s'étirer ce qui va augmenter la distance entre les différents atomes de Carbone et ainsi augmenter la résitance du capteur.
 Lorsque nous travaillons en tension, il se passe l'opposé. Les atomes de Carbone vont se rapprocher et la résistance du capteur va diminuer.
