@@ -63,7 +63,7 @@ Pour réaliser le capteur ainsi que le PCB associé, voici la liste des composan
 <div id='QuatriemeSection'/>
 
 ## 4. Simulation 
-Le but de réaliser en amont la simulation LTSpice du circuit intégré au capteur est de vérifier en théorie qu’il a bien été conçu, c’est-à-dire que l’on a un signal de sortie qui correspond à ce que l’on souhaite avoir pour ensuite pouvoir le traiter à l’aide de l’Arduino UNO. On peut peut l’utiliser également pour vérifier l’impact des différents composants et déterminer les valeurs de résistances, capacités nécessaires pour avoir la tension de sortie souhaitée. Dans notre cas, n’ayant pas conçu le circuit de nous même, nous avons simplement vérifié à l’aide de LTSpice qu’il correspondait à ce dont nous avions besoin pour réaliser pour amplifier le signal du capteur.
+Le but de réaliser en amont la simulation LTSpice du circuit intégré au capteur est de vérifier en théorie qu’il a bien été conçu, c’est-à-dire que l’on a un signal de sortie qui correspond à ce que l’on souhaite avoir pour ensuite pouvoir le traiter à l’aide de l’Arduino UNO. On peut l’utiliser également pour vérifier l’impact des différents composants et déterminer les valeurs de résistances, capacités nécessaires pour avoir la tension de sortie souhaitée. Dans notre cas, n’ayant pas conçu le circuit de nous même, nous avons simplement vérifié à l’aide de LTSpice qu’il correspondait à ce dont nous avions besoin pour réaliser pour amplifier le signal du capteur. La version de LTSpice utilisée version utilisée est LTSpice XVII.
 
 Pour cela, nous avons tout d’abord reproduit le circuit sur LTSpice comme montré ci-dessous:
 
@@ -88,7 +88,7 @@ On observe qu’à 50 Hz, le signal est atténué de 78 dB. Le bruit est donc bi
 <div id='CinquiemeSection1'/>
 
 ### 5.1. Schématique du circuit et création des symboles et empreintes des composants 
-La première étape du KICAD a été de réaliser la schématique du circuit, basé sur la simulation réalisée précédemment. Pour cela, nous avons tout d’abord importé le schéma de l’Arduino Uno qui existe déjà sur KiCAD. Nous avons été ensuite amenés à créer les symboles pour les composants non-existants sur LTSpice, ainsi que leur empreinte sur le PCB. Voici ci-dessous les différentes symboles avec leur empreinte associé:
+La première étape du KICAD a été de réaliser la schématique du circuit, basé sur la simulation réalisée précédemment. Pour cela, nous avons tout d’abord importé le schéma de l’Arduino Uno qui existe déjà sur KiCAD. Nous avons été ensuite amenés à créer les symboles pour les composants non-existants sur LTSpice, ainsi que leur empreinte sur le PCB. La version de KiCad utilisée est KiCad 7.0. Voici ci-dessous les différentes symboles avec leur empreinte associé:
 
 * Amplificateur LTC1050
 
