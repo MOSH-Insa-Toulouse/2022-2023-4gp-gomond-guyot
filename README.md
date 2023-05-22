@@ -157,6 +157,7 @@ Une fois les pistes du PCB créées, il faut réaliser le perçage du PCB puis l
 <div id='SeptiemeSection1'/>
 
 ### 7.1. Librairies utilisées 
+Nous avons utiliser la vertion de Arduino IDE 2.1.0.
 Pour la réalisation du code Arduino nous avons utiliser deux librairies qui sont **"SoftwareSerial.h"** pour réaliser un software serial sur deux pin pour l'utilisation du modude bluetooth. La deuxième est **"Adafruit_SSD1306.h"** qui sert pour l'utilisation de l'écran OLED.
 
 
